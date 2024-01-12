@@ -26,7 +26,8 @@ class Menu
 
     # returns a new mapped array for each dish with the value of dish name
     # and price. #{'%.2f' % dish.price}
-    @dishes.map { |dish| "#{dish.name}: #{'%.2f' % dish.price}" }.join("\n")
+    # @dishes.map { |dish| "#{dish.name}: #{'%.2f' % dish.price}" }.join("\n")
+    @dishes.map { |dish| "#{dish.name}: #{dish.price}" }.join(' ')
     # find out why join is necessary, because this fails:
     # @dishes.map { |dish| "#{dish.name}: #{'%.2f' % dish.price}" }
   end
